@@ -17,9 +17,10 @@ export const CheckCircleIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) 
   </svg>
 );
 
-export const CalendarIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+export const BalloonIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0h18M-4.5 12h22.5" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.75C8.27 4.75 5.25 8.1 5.25 12.25s3.02 7.5 6.75 7.5 6.75-3.35 6.75-7.5S15.73 4.75 12 4.75z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12 19.75l-1 2h2l-1-2z" />
   </svg>
 );
 
@@ -35,10 +36,11 @@ export const CashFlowIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => 
 </svg>
 );
 
-export const RehabIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-  <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.472-2.472a3.375 3.375 0 00-4.773-4.773L6.75 10.5M11.42 15.17L6.75 10.5m4.67 4.67L6.75 10.5" />
-</svg>
+export const HammerIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="M20.611 18.12L12.915 10.424M4.879 19.535C3.333 17.989 3.51 15.42 5.152 14.152L8.293 11.535C9.707 10.424 11.697 10.61 12.915 11.828L14.04 12.954C15.869 14.782 15.424 17.893 13.389 19.227L10.334 21.191C8.299 22.525 5.611 21.848 4.879 19.535Z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M12.914 10.424L17.561 5.777C18.732 4.605 20.611 4.605 21.782 5.777C22.954 6.948 22.954 8.828 21.782 10L19.343 12.439" />
+  </svg>
 );
 
 export const EntryFeeIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
@@ -49,7 +51,9 @@ export const EntryFeeIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => 
 
 export const InterestRateIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M9 14.25l6-6m-5.5.5h.01M19.5 21a1.5 1.5 0 01-1.5-1.5v-5.379a1.5 1.5 0 01.44-1.06L19.5 12m0-3a1.5 1.5 0 01-1.5-1.5V6a1.5 1.5 0 011.5-1.5h.008c.828 0 1.5.672 1.5 1.5v.379a1.5 1.5 0 01-.44 1.06L19.5 9M4.5 21a1.5 1.5 0 001.5-1.5v-5.379a1.5 1.5 0 00-.44-1.06L4.5 12m0-3a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H4.5a1.5 1.5 0 00-1.5 1.5v.379a1.5 1.5 0 00.44 1.06L4.5 9" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 6.75l-9 9" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M9.375 9.375a1.875 1.875 0 110-3.75 1.875 1.875 0 010 3.75z" />
+    <path strokeLinecap="round" strokeLinejoin="round" d="M14.625 16.875a1.875 1.875 0 110-3.75 1.875 1.875 0 010 3.75z" />
   </svg>
 );
 

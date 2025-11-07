@@ -12,7 +12,8 @@ const Header: React.FC = () => {
           </div>
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#buy-box" className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">Buy Box</a>
-            <a href="#deal-scorecard" className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">Deal Scorecard</a>
+            <a href="#deal-scorecard" className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">Creative Scorecard</a>
+            <a href="#fix-and-flip-scorecard" className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">Fix &amp; Flip Scorecard</a>
             <a href="#scorecard-faq" className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">FAQ</a>
           </nav>
         </div>

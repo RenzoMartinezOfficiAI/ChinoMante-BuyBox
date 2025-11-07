@@ -2,10 +2,10 @@ import React from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import BuyBoxCard from './components/BuyBoxCard';
-import Faq from './components/Faq';
 import Footer from './components/Footer';
 import DealScorecard from './components/DealScorecard';
 import ScorecardFaq from './components/ScorecardFaq';
+import FixAndFlipScorecard from './components/HowToSubmit';
 import { BUY_BOX_DATA } from './constants';
 
 const App: React.FC = () => {
@@ -38,9 +38,11 @@ const App: React.FC = () => {
         <DealScorecard />
 
         <ScorecardFaq />
-        
-        <Faq />
 
+        <div className="my-20 sm:my-32 border-t-2 border-[#39E2FF]/20"></div>
+
+        <FixAndFlipScorecard />
+        
       </main>
       <Footer />
     </div>

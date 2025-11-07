@@ -1,5 +1,5 @@
-import { BuyBoxData, ScorecardCategory, ScorecardFaqItem } from './types';
-import { CalendarIcon, CashFlowIcon, EntryFeeIcon, HomeValueIcon, InterestRateIcon, RehabIcon } from './components/Icons';
+import { BuyBoxData, ScorecardCategory, ScorecardFaqItem, FixAndFlipSectionData } from './types';
+import { BalloonIcon, CashFlowIcon, EntryFeeIcon, HomeValueIcon, InterestRateIcon, HammerIcon } from './components/Icons';
 
 export const BUY_BOX_DATA: BuyBoxData[] = [
   {
@@ -61,7 +61,7 @@ export const SCORECARD_DATA: ScorecardCategory[] = [
   {
     id: 'balloonPayment',
     title: 'Balloon Payment',
-    Icon: CalendarIcon,
+    Icon: BalloonIcon,
     options: [
       { label: 'Select Term...', value: -1 },
       { label: 'No balloon', value: 10 },
@@ -124,7 +124,7 @@ export const SCORECARD_DATA: ScorecardCategory[] = [
   {
     id: 'rehabNeeded',
     title: 'Rehab Needed',
-    Icon: RehabIcon,
+    Icon: HammerIcon,
     options: [
       { label: 'Select Budget...', value: -1 },
       { label: '$0', value: 10 },
@@ -206,3 +206,82 @@ export const SCORECARD_FAQ_DATA: ScorecardFaqItem[] = [
     example: 'If you buy a $100K house and your ALL in cost to buy the property is $5K, that would be 5% and that\'s an amazing entry fee!',
   },
 ];
+
+
+export const FIX_AND_FLIP_SUBMISSION_DATA: FixAndFlipSectionData = {
+  title: 'SUBMISSION & DEAL RATING',
+  heading: 'HOW GOOD IS MY SUBMISSION?',
+  sections: [
+    {
+      title: 'BASIC DETAILS',
+      sidebarNote: { level: 'CRITICAL', text: 'IF MISSING, YOUR DEAL WILL NOT BE LOOKED AT' },
+      items: [
+        { id: 's1', label: 'Deal has to be a Fix & Flip (No SubTo, novations, buy and hold, etc.)', type: 'REQUIRED' },
+        { id: 's2', label: 'Not recently renovated', type: 'REQUIRED' },
+        { id: 's3', label: 'Property address provided', type: 'REQUIRED' },
+        { id: 's4', label: 'Purchase price within the buybox parameters', type: 'REQUIRED' },
+      ],
+    },
+    {
+      title: 'PHOTOS',
+      sidebarNote: { level: 'WARNING', text: 'IF MISSING, YOUR DEAL MIGHT NOT BE LOOKED AT' },
+      items: [
+        { id: 's5', label: 'Providing current photos of the property', subLabel: '(Good quality and covering inside and outside)', type: 'IDEAL' },
+      ],
+    },
+    {
+      title: 'PROPERTY DETAILS',
+      sidebarNote: { level: 'INFO', text: 'IF MISSING, YOUR DEAL WILL STILL BE LOOKED AT' },
+      items: [
+        { id: 's6', label: 'Property Sq.Ft.', type: 'IDEAL' },
+        { id: 's7', label: 'Rooms count', type: 'IDEAL' },
+        { id: 's8', label: 'Bathrooms Count', type: 'IDEAL' },
+        { id: 's9', label: 'Garage Information', type: 'IDEAL' },
+        { id: 's10', label: 'Pool Information', type: 'IDEAL' },
+      ],
+      scoreLabel: 'TOTAL POINTS',
+    },
+  ],
+};
+
+export const FIX_AND_FLIP_DEAL_RATING_DATA: FixAndFlipSectionData = {
+  title: '',
+  heading: 'HOW GOOD IS MY DEAL?',
+  sections: [
+    {
+      title: 'BUYBOX',
+      dealKiller: true,
+      sidebarNote: { level: 'CRITICAL', text: 'IF YES TO ANY OF THESE, IT IS NOT A GOOD DEAL FOR US' },
+      items: [
+        { id: 'd1', label: 'Does it have post possession?', type: 'REQUIRED' },
+        { id: 'd2', label: 'Does it have major foundation issues?', type: 'REQUIRED' },
+        { id: 'd3', label: 'Does it have major structural damage?', type: 'REQUIRED' },
+        { id: 'd4', label: 'Is it in a flood zone?', type: 'REQUIRED' },
+        { id: 'd5', label: 'Is it outside of the buybox covered cities?', type: 'REQUIRED' },
+        { id: 'd6', label: 'Was it built earlier than 1960?', type: 'REQUIRED' },
+      ],
+    },
+    {
+      title: 'COMPS',
+      sidebarNote: { level: 'INFO', text: 'IF YES TO ANY OF THESE AND HAS ALL OF THE REQUIRED FIELDS ABOVE, YOUR DEAL HAS POTENTIAL' },
+      items: [
+        { id: 'd7', label: 'Do we have multiple comparables?', type: 'IDEAL' },
+        { id: 'd8', label: 'Are the comaprables in the same subdivision?', type: 'IDEAL' },
+        { id: 'd9', label: 'Are the comparables less than 6 months old?', type: 'IDEAL' },
+        { id: 'd10', label: 'Do the comparables have simliar layouts as the property?', subLabel: '(No more than 10% sq.ft. and simliar layout)', type: 'IDEAL' },
+      ],
+      scoreLabel: 'TOTAL POINTS',
+    },
+    {
+      title: 'ARV',
+      sidebarNote: { level: 'INFO', text: 'IF YES TO ANY OF THESE & HAS ALL THE REQUIRED FIELDS ABOVE PLUS A HIGH SCORE ON THE COMPS SECTION YOUR DEAL COULD BE A GOOD ONE' },
+      items: [
+        { id: 'd11', label: 'Were you able to calculate the ARV?', type: 'IDEAL' },
+        { id: 'd12', label: 'Is the ARV based on at least 3 comparables in the same subdivision?', type: 'IDEAL' },
+        { id: 'd13', label: 'Is the ARV based on comparables 1 mile or less away from the property?', type: 'IDEAL' },
+        { id: 'd14', label: 'After calculating the ARV, is the purchase price 70% or less from that amount minus renovations?', type: 'IDEAL' },
+      ],
+      scoreLabel: 'TOTAL POINTS',
+    },
+  ],
+};

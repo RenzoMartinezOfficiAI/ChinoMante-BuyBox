@@ -36,3 +36,28 @@ export interface ScorecardFaqItem {
   answer: string;
   example?: string;
 }
+
+// Types for Fix & Flip Scorecard
+export interface FixAndFlipChecklistItem {
+  id: string;
+  label: string;
+  subLabel?: string;
+  type: 'REQUIRED' | 'IDEAL';
+}
+
+export interface FixAndFlipChecklistSection {
+  title: string;
+  items: FixAndFlipChecklistItem[];
+  sidebarNote?: {
+    level: 'CRITICAL' | 'WARNING' | 'INFO';
+    text: string;
+  };
+  scoreLabel?: string;
+  dealKiller?: boolean;
+}
+
+export interface FixAndFlipSectionData {
+  title: string;
+  heading: string;
+  sections: FixAndFlipChecklistSection[];
+}
