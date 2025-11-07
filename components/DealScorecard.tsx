@@ -25,8 +25,8 @@ const DealScorecard: React.FC = () => {
       return { averageScore: 0, isComplete: false, resultText: 'Complete all fields to see your score.', scoreColor: 'text-[#7A6F9A]', progress: 0 };
     }
 
-    // Fix: Explicitly type the accumulator and current value to ensure correct type inference.
-    const total = validScores.reduce((acc: number, curr: number) => acc + curr, 0);
+    // Fix: Ensure reduce performs numeric addition, as values can be strings, leading to concatenation.
+    const total = validScores.reduce((acc, curr) => acc + Number(curr), 0);
     const average = total / 6;
     const isGoodDeal = average >= 6;
     
