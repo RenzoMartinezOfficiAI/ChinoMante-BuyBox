@@ -1,6 +1,14 @@
 import React from 'react';
 
 const Header: React.FC = () => {
+  const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    event.preventDefault();
+    const element = document.querySelector(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <header className="absolute top-0 left-0 right-0 z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -11,10 +19,10 @@ const Header: React.FC = () => {
             </span>
           </div>
           <nav className="hidden md:flex items-center space-x-8">
-            <a href="#buy-box" className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">Buy Box</a>
-            <a href="#deal-scorecard" className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">Creative Scorecard</a>
-            <a href="#fix-and-flip-scorecard" className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">Fix &amp; Flip Scorecard</a>
-            <a href="#scorecard-faq" className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">FAQ</a>
+            <a href="#buy-box" onClick={(e) => handleNavClick(e, '#buy-box')} className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">Buy Box</a>
+            <a href="#deal-scorecard" onClick={(e) => handleNavClick(e, '#deal-scorecard')} className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">Creative Scorecard</a>
+            <a href="#fix-and-flip-scorecard" onClick={(e) => handleNavClick(e, '#fix-and-flip-scorecard')} className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">Fix &amp; Flip Scorecard</a>
+            <a href="#scorecard-faq" onClick={(e) => handleNavClick(e, '#scorecard-faq')} className="text-sm font-medium text-[#B3A8D6] hover:text-white transition-colors">FAQ</a>
           </nav>
         </div>
       </div>
